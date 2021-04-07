@@ -1,4 +1,4 @@
-This is a code challenge for candidacy in software engineering with Reconstruction
+We are excited to get to know you and your work better! See below for instructions on the Backend and Frontend code challenges. 
 
 # Backend Code Challenge
 
