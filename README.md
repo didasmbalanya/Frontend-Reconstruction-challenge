@@ -52,8 +52,10 @@ There are a set of web technologies that are core to our solutions so we would l
 
 - Clone or fork this repo, which you will use as a reference to start your challenge
 - Open a PR or send us the link to your cloned repo at the end of the challenge
-- Code this as a responsive component using Next.js to the best of your ability; * use your font of choice *
+- Code the component below using Next.js to the best of your ability; make it responsive, use your font of choice 
 - We must be able to compile and run your code
+
+Here is the [Figma Board](https://www.figma.com/file/WtdJfhiaFTIuycqDHXcWOA/Reconstruction-Coding-Challenge?node-id=0%3A1) for you to reference the component specs in more depth. 
 
 ![image](https://user-images.githubusercontent.com/30765004/113932273-22821500-978f-11eb-81f2-f3872a25f515.png)
 
