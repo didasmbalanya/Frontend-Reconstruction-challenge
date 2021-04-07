@@ -1,0 +1,13 @@
+hasura-hooks:
+    handler: functions/hasura-hooks/index.handler
+    timeout: 60
+    environment:
+        GRAPHQL_API_ENDPOINT: ${self:custom.graphqlApiEndpoint}
+        HASURA_HOOKS_SECRET_NAME: ${self:custom.secrets.HASURA_HOOKS_SECRET_NAME}
+    events:
+        - alb:
+              listenerArn:
+                  Ref: Listener
+              priority: 300
+              conditions:
+                  path: /hasura-hooks

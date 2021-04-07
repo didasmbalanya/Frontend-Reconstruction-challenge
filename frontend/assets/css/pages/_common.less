@@ -1,0 +1,319 @@
+.center {
+   text-align: center;
+}
+.ant-row {
+   margin-right: -15px;
+   margin-left: -15px;
+   .ant-col {
+      padding-right: 15px;
+      padding-left: 15px;
+   }
+}
+.col-4dot8,
+.col-sm-4dot8,
+.col-md-4dot8,
+.col-lg-4dot8,
+.col-xl-4dot8 {
+   position: relative;
+   width: 100%;
+   min-height: 1px;
+   padding-right: 10px;
+   padding-left: 10px;
+}
+.col-4dot8 {
+   -webkit-box-flex: 0;
+   -ms-flex: 0 0 20%;
+   flex: 0 0 20%;
+   max-width: 20%;
+   margin-bottom: 20px;
+   @media only screen and (max-width:767px) {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
+   }
+}
+.box__card__wrapper {
+   .box-card();
+   padding: 80px;
+   margin-bottom: 108px;
+   @media only screen and (max-width:991px) {
+      margin-bottom: 90px;
+   }
+   @media only screen and (max-width:767px) {
+      margin-bottom: 50px;
+   }
+   @media only screen and (max-width:575px) {
+      padding: 40px;
+   }
+   .box__card__inner {
+      max-width: 600px;
+      margin: 0 auto;
+      h2 {
+         margin-bottom: 24px;
+      }
+      p,
+      li {
+         padding-bottom: 24px;
+         font-weight: 500;
+         line-height: 160%;
+         &.your-sincerely {
+            padding-top: 0px;
+            padding-bottom: 0;
+            strong {
+               display: block;
+               font-size: 24px;
+               padding-top: 4px;
+               line-height: 120%;
+               font-weight: 600;
+               @media only screen and (max-width:991px) {
+                  font-size: 16px;
+               }
+            }
+         }
+      }
+   }
+}
+.article__content {
+   h3 {
+      color: @primary;
+   }
+   ol {
+      list-style: decimal;
+      padding-left: 15px;
+   }
+   ul {
+      list-style: disc;
+      padding-left: 15px;
+   }
+   li {
+      padding-bottom: 24px;
+      font-weight: 500;
+   }
+}
+.ant-alert {
+   background: #E2D5DB;
+   border-radius: 12px;
+   text-align: center;
+   padding: 16px!important;
+   margin-bottom: 24px;
+   border: 0;
+   &.ant-alert-closable {
+      padding-right: 30px!important;
+   }
+   .ant-alert-message {
+      color: @primary;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 160%;
+   }
+   .ant-alert-description {
+      color: @primary;
+   }
+}
+.bg-overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   opacity: 0.6;
+   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%);
+   background-repeat: no-repeat;
+   background-position: top center;
+   border-radius: 12px;
+}
+span.grade {
+   color: @primary!important;
+   font-weight: 500!important;
+   font-size: 16px!important;
+   line-height: 160%!important;
+   text-transform: inherit!important;
+   text-overflow: ellipsis!important;
+   white-space: nowrap!important;
+   padding: 0!important;
+}
+.ant-card-loading-content {
+   padding: 24px;
+}
+.ant-spin {
+   color: @BrandTertiary;
+}
+.ant-spin-dot-item {
+   background-color: @BrandTertiary;
+}
+button {
+   .ant-spin-dot-item {
+      background-color: @secondary;
+   }
+}
+body.ant-scrolling-effect {
+   overflow: auto!important;
+   width: 100%!important;
+}
+.curriculum__overview {
+   .section-margin();
+   h2 {
+      padding-bottom: 12px;
+   }
+}
+.filter-sticky {
+   top: 144px !important;
+}
+.filters,
+.account__tab {
+   position: sticky;
+   top: 95px;
+   z-index: 5;
+   background-color: @secondary;
+   @media only screen and (max-width:575px) {
+      .ant-select {
+         margin-bottom: 15px;
+      }
+   }
+   .divider {
+      width: 100%;
+      height: 2px;
+      background: @secondary;
+   }
+   .courses-filter {
+      padding: 11px 0 12px;
+   }
+   &.sticky {
+      background-color: @white;
+   }
+}
+.hasError {
+   display: block;
+   color: @red;
+   margin-top: -12px;
+   &.radioError {
+      margin-top: -20px;
+      @media only screen and (max-width:575px) {
+         margin-top: -12px;
+      }
+   }
+   &.hasErrorDOB {
+      @media only screen and (max-width:575px) {
+         padding-bottom: 10px;
+      }
+   }
+}
+.hasSuccess {
+   display: block;
+   color: #155724;
+}
+.aTagBig {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 120%;
+   color: @primary;
+   &:hover {
+      color: @BrandTertiary;
+   }
+}
+.searchText {
+  font-weight: bold;
+}
+
+.searchText {
+   font-weight: bold;
+}
+.aTagBig {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 120%;
+   color: @primary;
+   &:hover {
+      color: @BrandTertiary;
+   }
+}
+
+
+.hasError {
+   display: block;
+   color: @red;
+   margin-top: -12px;
+   &.radioError {
+      margin-top: -20px;
+      @media only screen and (max-width:575px) {
+         margin-top: -12px;
+      }
+   }
+   &.hasErrorDOB {
+      @media only screen and (max-width:575px) {
+         padding-bottom: 10px;
+      }
+   }
+}
+.hasSuccess {
+   display: block;
+   color: #155724;
+}
+
+/* Login */
+.login__wrapper {
+   .login__inner {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+   }
+}
+
+/* Loader */
+.recon-loader-white {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+
+   &.static {
+      position: static;
+      transform: none;
+   }
+}
+
+/* Slick */
+
+.carousel-swap-leave {
+   transition: transform 1s ease-in-out;
+   transform: translate(0, 0);
+}
+.carousel-swap-leave-active {
+   transform: translate(-100%, 0);
+}
+.carousel-swap-enter {
+   transition: transform 1s ease-in-out;
+   transform: translate(100%, 0);
+}
+.carousel-swap-enter-active {
+   transform: translate(0, 0);
+}
+
+.title-snackbar {
+   font-size: 16px;
+   color: #fff;
+   padding-right: 12px;
+   @media only screen and (max-width:575px) {
+      font-size: 11px;
+      padding-right: 8px;
+   }
+}
+
+.button-snackbar {
+  text-decoration: none;
+  background-color: #fff;
+  font-size: 13px;
+  margin: 0;
+  padding: 6px 15px;
+  border-radius: 13px;
+  border: none;
+  color: #5e57cc;
+  font-weight: bold;
+   @media only screen and (max-width:575px) {
+      font-size: 11px;
+        padding: 3px 7px;
+      // padding-right: 8px;
+  }
+}

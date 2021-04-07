@@ -1,0 +1,4 @@
+scalar uuid
+type Mutation {
+    purchasePlan(studentId: uuid!, planId: String!, promoCode: String): String!
+}

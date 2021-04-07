@@ -1,0 +1,77 @@
+.about__us__bg__wrapper,
+.curriculum__wrapper,
+.curriculum__operations__mixer,
+.curriculum__bottom__bg {
+    background-image: url("/blob-right.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    max-width: 1650px;
+    margin: 0 auto;
+    width: 100%;
+}
+.about__us__bg__wrapper {
+    background-position-y: 483px;
+}
+.curriculum__operations__mixer {
+    background-position: right;
+    background-position-y: -160px;
+    @media only screen and (max-width:1199px) {
+        background-image: none;
+    }
+}
+.curriculum__bottom__bg {
+    background-position: center right;
+    @media only screen and (max-width:1199px) {
+        background-image: none;
+    }
+}
+.leadership__wrapper,
+.operations__wrapper {
+    background-image: url("/blob-left.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-y: -90px;
+    max-width: 1650px;
+    margin: 0 auto;
+    width: 100%;
+    background-size: contain;
+    @media only screen and (max-width:1199px) {
+        background-image: none;
+    }
+}
+.curriculum__wrapper {
+    background-position: center left;
+    background-position-y: auto;
+    @media only screen and (max-width:1199px) {
+        background-image: none;
+    }
+}
+.instructors__wrapper {
+    background-size: auto;
+    @media only screen and (max-width:1199px) {
+        background-image: none;
+    }
+}
+.our__people__wrapper {
+    .our__people__inner {
+        max-width: 704px;
+        margin: 0 auto;
+        .section-margin();
+        h1 {
+            color: @primary;
+            font-size: 62px;
+            padding-bottom: 16px;
+            @media only screen and (max-width:991px) {
+                font-size: 48px;
+            }
+        }
+        p {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 160%;
+            @media only screen and (max-width:991px) {
+                font-size: 18px;
+            }
+        }
+    }
+}

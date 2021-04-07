@@ -1,0 +1,4 @@
+schema: ./schema.graphql
+extensions:
+  diff:
+    baseSchema: your-base-schema-here

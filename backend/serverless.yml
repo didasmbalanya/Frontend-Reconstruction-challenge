@@ -1,0 +1,184 @@
+service: reconstruction
+
+provider:
+    name: aws
+    runtime: nodejs12.x
+    stage: "${opt:stage, 'dev'}"
+    region: "${opt:region, 'us-east-1'}"
+    versionFunctions: false
+    logRetentionInDays: ${self:custom.logRetentionInDays.${self:provider.stage}}
+    deploymentBucket:
+        name: '${file(helpers.js):getAccountId}-${self:service.name}-${self:provider.stage}-deployment'
+    environment:
+        SERVICE_NAME: '${self:service}'
+        STAGE: '${self:provider.stage}'
+        SENTRY_ENVIRONMENT: '${self:provider.stage}'
+        SENTRY_SOURCEMAPS: true
+        SERVERLESS_SERVICE: backend
+        SERVERLESS_STAGE: '${self:provider.stage}'
+        NODE_OPTIONS: '--enable-source-maps'
+        SENTRY_DSN: '${env:SENTRY_DSN}'
+        STRIPE_SECRET_KEY: '${env:STRIPE_SECRET_KEY}'
+        MAILCHIMP_API_KEY: '${env:MAILCHIMP_API_KEY}'
+
+package:
+    individually: true
+    exclude:
+        - '**/*'
+        - node_modules/**
+    include:
+        - functions/**
+        - '!functions/**/__tests__/**'
+        - '!functions/**/__mocks__/**'
+    #include:
+    #  - functions/common/**
+    #exclude:
+    #  - "**/*"
+
+plugins:
+    - serverless-iam-roles-per-function
+    - add-create-log-group-permission
+    - serverless-layers
+    - serverless-webpack
+    - serverless-dotenv-plugin
+    - serverless-offline
+
+custom:
+    RDBMS_DATABASE: '${self:service}_${self:provider.stage}'
+    HASURA_GRAPHQL_ENABLE_CONSOLE:
+        stage: false
+        prod: false
+        dev: true
+    secrets:
+        AUTH_PASSWORD_SECRET_NAME: '/reconstruction/${self:provider.stage}/AUTH_PASSWORD'
+        RDBMS_PASSWORD_SECRET_NAME: '/${self:service.name}/${self:provider.stage}/RDBMS_PASSWORD'
+        RDBMS_URL_SECRET_NAME: '/${self:service.name}/${self:provider.stage}/RDBMS_URL_'
+        HASURA_HOOKS_SECRET_NAME: '/${self:service.name}/${self:provider.stage}/HASURA_HOOKS_SECRET'
+        HASURA_SECRET_SECRET_NAME: '/${self:service.name}/${self:provider.stage}/HASURA_ADMIN_SECRET'
+        SAML_SESSION_SECRET_NAME: '/${self:service.name}/${self:provider.stage}/SAML_SESSION_SECRET'
+        TWILIO_AUTH_TOKENS_SECRET_NAME: '/${self:service.name}/${self:provider.stage}/TWILIO_AUTH_TOKENS_SECRET'
+    putParameters:
+        serviceName: ${self:service.name}
+        keyId:
+            Ref: KMSKey
+        parameters:
+            SSO_KEY_PASS: ${env:SSO_KEY_PASS}
+    dashboardLinks:
+        dev: https://admin-dev.reconstruction.us/
+        stage: https://admin-stage.reconstruction.us/
+        prod: https://admin.reconstruction.us/
+    DASHBOARD_LINK: '${self:custom.dashboardLinks.${self:provider.stage}}'
+    webAppsLinks:
+        dev: https://dev.reconstruction.us
+        stage: https://stage.reconstruction.us
+        prod: https://reconstruction.us
+    WEBAPP_LINK: '${self:custom.webAppsLinks.${self:provider.stage}}'
+    logRetentionInDays:
+        prod: 90
+        dev: 3
+        stage: 7
+    api:
+        dev: 'api-dev.reconstruction.us'
+        prod: 'api.reconstruction.us'
+        stage: 'api-stage.reconstruction.us'
+    API: 'https://${self:custom.api.${self:provider.stage}}'
+    aliases:
+        dev:
+            - 'api-dev.reconstruction.us'
+            - 'sso-dev.reconstruction.us'
+        prod:
+            - 'api.reconstruction.us'
+            - 'sso.reconstruction.us'
+        stage:
+            - 'api-stage.reconstruction.us'
+            - 'sso-stage.reconstruction.us'
+    auth:
+        domain:
+            dev: 'auth-dev.reconstruction.us'
+            stage: 'auth-stage.reconstruction.us'
+            prod: 'auth.reconstruction.us'
+        callbacks:
+            dev:
+                - http://localhost:3000/sso
+                - http://localhost:3000/
+                - ${self:custom.DASHBOARD_LINK}
+                - https://dev.reconstruction.us/sso
+                - https://dev.reconstruction.us/
+            stage:
+                - ${self:custom.DASHBOARD_LINK}
+                - https://stage.reconstruction.us/
+                - https://stage.reconstruction.us/sso
+            prod:
+                - https://reconstruction.us/sso
+                - https://reconstruction.us/
+                - ${self:custom.DASHBOARD_LINK}
+    dotenv:
+        include: []
+    serverless-layers:
+        dependenciesPath: ./package.json
+        packageManager: npm
+    serverless-offline:
+        babelOptions:
+            presets: ['es2017']
+    project:
+        KMSKeyArn: ReconKMSKeyArn
+        KMSKeyId: ReconKMSKeyId
+    webpack:
+        webpackConfig: 'webpack.config.js'
+        packager: yarn
+        excludeFiles: '**/__mocks__|**/__tests__|**/*.test.js'
+        concurrency: ${env:BUILD_CONCURRENCY, 10}
+        includeModules: false
+    deletionPolicy:
+        dev: Delete
+        prod: Retain
+        stage: Retain
+    cleverHook: '${self:custom.API}/clever-hook'
+    graphqlApiEndpoint:
+        'Fn::Join':
+            - ''
+            - - 'https://'
+              - 'Fn::GetAtt':
+                    - Distribution
+                    - DomainName
+              - '/v1/graphql'
+    hasuraAdminSecretParameterName: '/${self:service.name}/${self:provider.stage}/HASURA_ADMIN_SECRET'
+    hasuraSecretStatement:
+        Effect: Allow
+        Action:
+            - 'secretsmanager:GetSecretValue'
+        Resource:
+            'Fn::Join':
+                - ''
+                - - 'arn:aws:secretsmanager:'
+                  - Ref: 'AWS::Region'
+                  - ':'
+                  - Ref: 'AWS::AccountId'
+                  - ':secret:${self:custom.secrets.HASURA_SECRET_SECRET_NAME}-??????'
+    ssmStatement:
+        Effect: Allow
+        Action:
+            - ssm:GetParameter
+            - ssm:GetParameters
+        Resource:
+            Fn::Join:
+                - ''
+                - - 'arn:aws:ssm:'
+                  - Ref: 'AWS::Region'
+                  - ':'
+                  - Ref: 'AWS::AccountId'
+                  - ':parameter/${self:service.name}/${self:provider.stage}/*'
+    kmsStatement:
+        Effect: Allow
+        Action:
+            - 'kms:Decrypt'
+        Resource:
+            Fn::GetAtt:
+                - KMSKey
+                - Arn
+
+functions:
+    - ${file(functions/remote-schema.yml)}
+    - ${file(functions/hasura-hooks.yml)}
+
+

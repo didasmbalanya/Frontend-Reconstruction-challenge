@@ -1,0 +1,12 @@
+graphql:
+    handler: functions/remote-schema/index.handler
+    environment:
+        GRAPHQL_API_ENDPOINT: ${self:custom.graphqlApiEndpoint}
+        EMAIL_DOMAIN: reconstruction.us
+    events:
+        - alb:
+              listenerArn:
+                  Ref: Listener
+              priority: 400
+              conditions:
+                  path: /remote-schema

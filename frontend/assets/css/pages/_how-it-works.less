@@ -1,0 +1,233 @@
+.how__it__works__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 218px !important;
+
+    @media only screen and (max-width: 767px) {
+        margin-top: 185px !important;
+    }
+
+    .hero__wrapper__how__it__works {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 78.7%;
+
+        @media only screen and (max-width: 767px) {
+            width: 91.7%;
+        }
+
+        h1 {
+            width: 81%;
+            min-height: 222px;
+            margin-bottom: 54px;
+            padding-bottom: 0px !important;
+            color: #3f0d28;
+            font-size: 62px;
+            font-family: @jubilat;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120% !important;
+            text-align: center;
+
+            @media only screen and (max-width: 767px) {
+                width: 100%;
+                margin-bottom: 32px;
+                font-size: 40px;
+                line-height: 51px;
+            }
+        }
+    }
+
+    .pricing-info-card-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 79.7%;
+        min-height: 983px;
+        margin-top: -9.5%;
+        padding: 64px 0;
+        margin-bottom: 116px;
+        background: @white;
+        box-shadow: 0px 4px 44px rgba(249, 214, 224, 0.3);
+        border-radius: 12px;
+
+        @media only screen and (max-width: 991px) {
+            width: 88%;
+        }
+        @media only screen and (max-width: 767px) {
+            width: 91.7%;
+            padding: 0 0 !important;
+            margin-bottom: 64px;
+        }
+        .pricing__info__card__wrapper {
+            height: auto;
+            margin-bottom: 0 !important;
+            .pricing-header {
+                align-items: flex-start;
+                margin-bottom: 64px;
+                h2 {
+                    color: #000000;
+                    @media only screen and (max-width: 767px) {
+                        color: @primary;
+                    }
+                }
+                p {
+                    text-align: start;
+                }
+            }
+            .pricing__contents__wrapper {
+                height: auto;
+                box-shadow: none;
+
+                .pricing_contents {
+                    height: auto;
+                    padding: 0 0 !important;
+                }
+            }
+        }
+        .pricing__mobile__card__wrapper {
+            margin-bottom: 0 !important;
+        }
+    }
+    .how-it-works-digital-tutoring {
+        display: flex;
+        justify-content: center;
+        padding: 116px 0;
+        margin-bottom: 116px;
+        background: @white;
+        .site-card-wrapper {
+            width: 77.8%;
+            margin-bottom: 0;
+            @media only screen and (max-width: 1339px) and (min-width: 991px) {
+                width: 96%;
+            }
+            @media only screen and (max-width: 767px) {
+                width: 91.7%;
+            }
+            .site-card-inner-content {
+                align-items: flex-start;
+                width: 100%;
+                @media only screen and (max-width: 767px) {
+                    align-items: center;
+                }
+                h2 {
+                    color: #000000;
+                    @media only screen and (max-width: 767px) {
+                        color: @primary;
+                    }
+                }
+
+                p {
+                    text-align: start;
+                    @media only screen and (max-width: 767px) {
+                        text-align: center;
+                    }
+                }
+            }
+
+            .ant-row {
+                .ant-col {
+                    .card-col-inner {
+                        .site-card-curriculum-content {
+                            @media only screen and (max-width: 1299px) and (min-width: 992px) {
+                                padding: 20px;
+                            }
+                            .col-inner-bottom {
+                                a {
+                                    @media only screen and (max-width: 1339px) and (min-width: 991px) {
+                                        padding-top: 10px;
+                                        bottom: 20px;
+                                        left: 20px;
+                                        right: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            margin-bottom: 64px;
+            padding: 40px 0;
+        }
+    }
+
+    .experience__section__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 116px;
+        @media only screen and (max-width: 767px) {
+            margin-bottom: 64px;
+        }
+
+        .experience-section-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 70.9%;
+            @media only screen and (max-width: 767px) {
+                width: 91.7%;
+            }
+
+            .experience-section-header {
+                width: 100%;
+                margin-bottom: 64px;
+                @media only screen and (max-width: 767px) {
+                    margin-bottom: 40px;
+                }
+                h1 {
+                    margin-bottom: 32px;
+                    padding-bottom: 0;
+                    color: #000000;
+                    font-size: 48px;
+                    font-family: @jubilat;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 120%;
+                    @media only screen and (max-width: 767px) {
+                        color: @primary;
+                        margin-bottom: 16px;
+                        font-size: 32px;
+                        text-align: center;
+                        line-height: 38.4px;
+                    }
+                }
+                p {
+                    color: @primaryLight;
+                    font-family: @Poppins;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 160%;
+                    @media only screen and (max-width: 767px) {
+                        font-size: 15px;
+                        text-align: center;
+                        line-height: 24px;
+                    }
+                }
+            }
+            .experience-section-contents {
+                width: 100%;
+                height: 0;
+                padding-bottom: 56%;
+                position: relative;
+
+                iframe {
+                    position: absolute;
+                }
+                div {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

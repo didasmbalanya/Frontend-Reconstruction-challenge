@@ -1,0 +1,381 @@
+.account__tab {
+    background: @white!important;
+    ul {
+        padding-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        overflow: hidden;
+        overflow-x: auto;
+        li {
+            display: inline-block;
+            margin-right: 32px;
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                color: @primaryLight;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 120%;
+                border-bottom: 4px solid transparent;
+                padding-bottom: 16px;
+                display: inline-block;
+                @media only screen and (max-width: 479px) {
+                    font-size: 14px;
+                    padding-bottom: 10px;
+                }
+                &.activeLink {
+                    color: @primary;
+                    border-color: @primary;
+                    &:hover {
+                        border-color: @primary;
+                    }
+                }
+                &:hover {
+                    color: @primary;
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+}
+.account__main__content {
+    margin-top: 80px;
+    .section-margin();
+    .account__main__content__inner {
+        max-width: 870px;
+        margin: 0 auto;
+        h4 {
+            font-family: @Poppins;
+            color: @primary;
+            margin-bottom: 16px;
+            font-size: 24px;
+            line-height: 160% !important;
+        }
+        .infinite-scroll-component {
+            overflow: visible !important;
+        }
+        .ant-card {
+            background: @white;
+            box-shadow: 0px 4px 32px rgba(240, 109, 137, 0.16);
+            border-radius: 16px;
+            border: 0;
+            margin-bottom: 16px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .my__schedule__card__left {
+                .label-leaner-a {
+                    font-family: Poppins, serif;
+                    font-weight: 600;
+                    font-size: 12px;
+                    color: #894eff;
+                    line-height: 20px;
+                    text-align: center;
+                }
+
+                .label-leaner-v {
+                    font-family: Poppins, serif;
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 20px;
+                    color: #51c2b8;
+                    text-align: center;
+                }
+                .button-secondary-l {
+                    margin-top: 24px;
+                }
+                @media only screen and (max-width: 575px) {
+                    margin-bottom: 30px;
+                }
+            }
+            .my__schedule__card__left,
+            .my__schedule__card__right {
+                h4 {
+                    color: #000;
+                    margin-left: 0;
+                    line-height: 120% !important;
+                    margin-bottom: 8px;
+                }
+                span {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 160%;
+                    color: #000;
+                    display: block;
+                }
+            }
+            .my__schedule__card__right {
+                position: relative;
+                border: 1px solid @primary;
+                padding: 24px;
+                border-radius: 10px;
+                @media only screen and (max-width: 767px) {
+                    text-align: center;
+                    img {
+                        max-height: 190px;
+                    }
+                }
+                span {
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 120%;
+                    color: @BrandTertiary;
+                    margin-bottom: 4px;
+                    text-transform: uppercase;
+                    &.grade {
+                        margin: 0;
+                    }
+                }
+                h4 {
+                    font-family: @jubilat;
+                    color: @primary;
+                    margin-bottom: 4px;
+                    @media only screen and (min-width: 768px) {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        height: 85px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
+            }
+            .my__student__card__right {
+                padding: 8px;
+            }
+            .account__main__content__inner .mystudent__inner {
+                .recon-loader {
+                    margin-bottom: 16px !important;
+                }
+            }
+        }
+        &.account__courses__content__inner {
+            max-width: 870px;
+            margin: 0 auto;
+            h4 {
+                font-size: 32px;
+                margin: 0 0 24px;
+                @media only screen and (max-width: 479px) {
+                    font-size: 26px;
+                    margin: 0 0 13px;
+                }
+            }
+            .my__account__card {
+                span {
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 120%;
+                    color: @BrandTertiary;
+                    margin-bottom: 7px;
+                    display: inline-block;
+                    text-transform: uppercase;
+                    &.grade {
+                        margin-bottom: 12px;
+                    }
+                }
+                h4 {
+                    font-family: @jubilat;
+                    color: @primary;
+                    margin-bottom: 7px;
+                    font-size: 24px;
+                }
+                .modal-info-more {
+                    > .ant-row-middle > .ant-col {
+                        padding: 0 !important;
+                        .modal-info-col {
+                            margin-left: 24px;
+                            padding: 12px 24px 12px 0;
+                        }
+                        &:first-child {
+                            .modal-info-col {
+                                margin-left: 0;
+                                padding: 12px 24px;
+                            }
+                        }
+                    }
+                    .modal-info-col {
+                        border-top: 1px solid @uiLight;
+                        .ant-col {
+                            color: @primary;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 120%;
+                            span {
+                                color: @BrandTertiary;
+                                font-family: @Poppins;
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 16px;
+                                margin: 0;
+                                text-transform: inherit;
+                                word-break: break-all;
+                            }
+                            .plan-learner-plus {
+                                color: @brandPrimary !important;
+                            }
+
+                            .plan-learner {
+                                color: @lightPurple;
+                                font-family: @Poppins;
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 16px;
+                                margin: 0;
+                                text-transform: inherit;
+                                word-break: break-all;
+                                &.error {
+                                    color: rgb(150, 3, 60) !important;
+                                }
+                            }
+                        }
+                        &.subscription_plan__leaner_item {
+                            padding: 8px 24px !important;
+                            padding-right: 0px !important;
+                            &:first-child {
+                                border-top: none;
+                                padding-top: 0px !important;
+                            }
+                        }
+                    }
+                    .modal-info-col:first-child {
+                        border-top: none;
+                        padding-top: 0;
+                    }
+                }
+                .account_info {
+                    h4 {
+                        font-family: 'Poppins', sans-serif;
+                        color: #000;
+                        line-height: 38.4px;
+                        font-size: 24px;
+                        font-weight: 500;
+                    }
+                }
+                .account_info .modal-info-col:first-child {
+                    padding-top: 0 !important;
+                }
+                .modal-info-student-heading {
+                    padding: 4px 24px 12px !important;
+                    .student_profile {
+                        font-family: 'poppins';
+                        font-size: 24px;
+                        font-weight: 500;
+                        color: #000;
+                        line-height: 38.4px;
+                        // left: 24px;
+                        // top: 24px;
+                        height: 38px;
+                        font-style: normal;
+                        @media only screen and (max-width: 479px) {
+                            font-size: 14px;
+                            position: relative;
+                            // top:12px;
+                            // left:0;
+                            line-height: normal;
+                            height: auto;
+                        }
+                    }
+                    .learner-subscriptions {
+                        color: @brandPrimary;
+                    }
+                    .name-plan {
+                        color: @lightPurple !important;
+                    }
+                    .name-plan-plus {
+                        color: @brandPrimary !important;
+                    }
+                }
+                .student__account__info {
+                    .modal-info-col {
+                        padding: 12px 24px !important;
+                        &:last-child {
+                            padding-bottom: 0 !important;
+                        }
+                    }
+                }
+                .modal-info-col {
+                    .ant-row {
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+    .student__heading {
+        margin-bottom: 24px;
+        button {
+            background: rgba(63, 13, 40, 0.15);
+            color: #3f0d28;
+        }
+        h4 {
+            margin-bottom: 0px;
+            line-height: normal !important;
+            margin-top: 8px;
+        }
+    }
+    .account__info__updatebtn {
+        border-radius: 8px;
+        font-size: 12px;
+        padding: 8.5px 19px;
+        background: rgba(63, 13, 40, 0.15);
+        color: #000;
+        font-family: 'Poppins', sans-serif;
+        @media only screen and (max-width: 575px) {
+            // float: none !important;
+            // margin-top: 10px !important;
+        }
+    }
+    .modal-info-col:last-child {
+        padding-bottom: 0 !important;
+    }
+    .modal-info-col:first-child {
+        padding-top: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .account__info__btn {
+        text-align: center !important;
+    }
+}
+.account__calendar_col {
+    text-align: right;
+}
+.account__calendar_btn {
+    // background: url('/add-to-calander.svg') 12px center transparent no-repeat;
+    //styleName: Actions / M (16) (M);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    height: 35px;
+    width: 100%;
+    right: 0;
+    position: relative;
+    top: 1.5px;
+    border-radius: 8px;
+    padding: 8px 16px 8px 12px;
+
+    color: #894eff;
+
+    /* Brand / Tertiary *(500) */
+
+    border: 1px solid #894eff;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: rgba(137, 78, 255, 0.15);
+    }
+}
+
+.container-subscriptions:not(:last-child) {
+    //margin-top: -8px;
+    margin-bottom: 16px;
+}

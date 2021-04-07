@@ -1,0 +1,94 @@
+* {
+   box-sizing: border-box;
+   -webkit-font-smoothing: antialiased;
+   text-rendering: optimizeLegibility;
+}
+/* html element 62.5% font-size for REM use */
+html {
+   font-size: 62.5%;
+   height: 100%;
+}
+body {
+   font-family: @Poppins;
+   font-size: 16px;
+   line-height: 160%;
+   background-color: @secondary;
+   color: @primary;
+   height: 100%;
+   width: 100%;
+   padding: 0;
+   margin: 0;
+   -webkit-touch-callout: none !important;
+   &.noScroll,
+   &.menuIsOpen {
+      overflow: hidden;
+   }
+}
+.ant-layout {
+   background-color: @secondary;
+}
+img {
+   max-width: 100%;
+   border-radius: 10px;
+   vertical-align: middle;
+}
+a {
+   color: @contentBlue;
+   text-decoration: none;
+}
+a:focus {
+   color: @contentBlue;
+   outline: 0;
+}
+a:hover {
+   color: @primary;
+   outline: 0;
+   text-decoration: none;
+}
+p {
+   color: @primary;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: @jubilat;
+   font-weight: 600;
+   line-height: 120%!important;
+}
+h1,
+h1.ant-typography {
+   font-size: 48px;
+   color: @secondary;
+   padding-bottom: 12px;
+   margin: 0;
+   @media only screen and (max-width:991px) {
+      font-size: 40px;
+   }
+   @media only screen and (max-width:360px) {
+      font-size: 34px;
+   }
+}
+h2,
+h2.ant-typography,
+.ant-typography h2 {
+   font-size: 48px;
+   color: @primary;
+   margin: 0;
+   @media only screen and (max-width:991px) {
+      font-size: 36px;
+   }
+   @media only screen and (max-width:575px) {
+      font-size: 28px;
+   }
+}
+h4,
+h4.ant-typography,
+.ant-typography h4 {
+   font-size: 32px;
+   @media only screen and (max-width:991px) {
+      font-size: 22px;
+   }
+}

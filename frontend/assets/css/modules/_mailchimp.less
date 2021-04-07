@@ -1,0 +1,54 @@
+.mailchimp__wrapper {
+    background: @white;
+    border-radius: 14px;
+    padding: 4px 4px 4px 16px;
+    display: inline-block;
+    max-width: 390px;
+    width: 100%;
+    border: 1px solid transparent;
+    @media only screen and (max-width:575px) {
+        padding-left: 10px;
+    }
+}
+.inputWrapper {
+    text-align: left;
+    input[type="email"],
+    input[type="text"],
+    input[type="password"],
+    input[type="number"] {
+        background: transparent;
+        border: 0;
+        height: auto;
+        color: @primaryLight;
+        font-size: 16px;
+        font-family: @Poppins;
+        padding: 0;
+        box-shadow: none;
+        @media only screen and (max-width:575px) {
+            font-size: 14px;
+        }
+    }
+}
+.button-primary-l {
+    &.mailchimp-btn {
+        padding: 16px 24px;
+        color: @white;
+        @media only screen and (max-width:575px) {
+            font-size: 20px;
+        }
+        @media only screen and (max-width:360px) {
+            font-size: 16px;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
+.response-wrapper {
+    a {
+        color: @white;
+    }
+}
+.is-focused {
+    border-color: @primary!important;
+}

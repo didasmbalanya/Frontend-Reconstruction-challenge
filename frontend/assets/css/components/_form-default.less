@@ -1,0 +1,208 @@
+input[type='text'],
+input[type='phone'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+.ant-input {
+    background: rgba(249, 223, 219, 0.1);
+    border: 1px solid @uiLight;
+    border-radius: 3px;
+    height: 61px;
+    color: @secondary;
+    padding: 0 13px;
+    font-size: 18px;
+    font-family: @jubilat;
+    font-weight: 500;
+    width: 100%;
+    box-shadow: none;
+    &::placeholder {
+        color: rgba(106, 33, 53, 0.5);
+    }
+    &:focus {
+        outline: none;
+    }
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+label {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 120%;
+    color: @primary;
+}
+.modal-selection-focused {
+    .ant-select {
+        .ant-select-arrow {
+            top: 45%;
+        }
+    }
+    .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+        .ant-select-selection-search-input {
+            height: 56px;
+            font-family: @Poppins;
+        }
+        .ant-select-selection-placeholder {
+            color: rgba(84, 23, 46, 0.5) !important;
+            font-family: @Poppins;
+        }
+    }
+}
+.ant-select {
+    .ant-select-selector {
+        border-radius: 12px !important;
+        height: 56px !important;
+        padding: 16px 24px !important;
+        border: 0 !important;
+        background-color: rgba(63, 13, 40, 0.15) !important;
+        @media only screen and (max-width: 575px) {
+            padding: 10px 16px !important;
+            height: 42px !important;
+        }
+    }
+    .ant-select-selection-placeholder,
+    .ant-select-selection-item,
+    .ant-select-selection-search-input {
+        color: @primary!important;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 120% !important;
+        opacity: 1;
+        font-family: @jubilat;
+        @media only screen and (max-width: 575px) {
+            font-size: 16px;
+        }
+    }
+    .ant-select-arrow {
+        right: 24px;
+        svg {
+            path {
+                fill: @primary;
+            }
+        }
+        @media only screen and (max-width: 575px) {
+            right: 16px;
+        }
+    }
+    &.ant-select-open-drop {
+        .ant-select-selector {
+            background-color: @primary!important;
+        }
+        .ant-select-selection-placeholder,
+        .ant-select-arrow,
+        .ant-select-selection-item {
+            color: @white!important;
+            opacity: 1;
+            svg {
+                path {
+                    fill: @white;
+                }
+            }
+        }
+    }
+    &.ant-select-open {
+        .ant-select-selection-item {
+            opacity: 1;
+        }
+    }
+    &:not(.ant-select-disabled):hover .ant-select-selector,
+    &.ant-select-focused.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+        border: 0 !important;
+        box-shadow: none !important;
+    }
+}
+.ant-select-dropdown {
+    background: @white;
+    box-shadow: 0px 4px 32px rgba(240, 109, 137, 0.16);
+    border-radius: 12px;
+    padding: 8px;
+    text-align: left;
+    .ant-select-item-option {
+        color: @primaryLight;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%;
+        padding: 16px;
+        border-radius: 12px;
+        @media only screen and (max-width: 575px) {
+            font-size: 16px;
+        }
+        &.ant-select-item-option-active {
+            background: @grey;
+        }
+        &.ant-select-item-option-selected {
+            background: transparent;
+            .ant-select-item-option-state {
+                color: @primary;
+                svg {
+                    width: 15px;
+                    height: 11px;
+                    vertical-align: middle;
+                }
+            }
+        }
+        .ant-select-item-option-content {
+            white-space: normal;
+            text-overflow: inherit;
+        }
+    }
+}
+
+.input__radio__wrapper {
+    input[type='checkbox'],
+    input[type='radio'] {
+        position: absolute;
+        visibility: hidden;
+    }
+    input[type='checkbox']:checked ~ .input__radio__inner,
+    input[type='radio']:checked ~ .input__radio__inner {
+        background: rgba(63, 13, 40, 0.15);
+        .check {
+            border: 8px solid @primary;
+            z-index: 9;
+            &:before {
+                position: absolute;
+                left: -4px;
+                top: -13px;
+                width: 8px;
+                height: 6px;
+            }
+        }
+    }
+    label {
+        font-family: @jubilat;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 48px;
+        width: 100%;
+        display: inline-table;
+        position: relative;
+        z-index: 9;
+        cursor: pointer;
+        -webkit-transition: all 0.25s linear;
+    }
+    .check {
+        display: block;
+        position: absolute;
+        border: 1px solid @primary;
+        border-radius: 100px;
+        height: 16px;
+        width: 16px;
+        top: calc(50% - 9px);
+        left: 16px;
+        z-index: 5;
+        /* transition: border .25s linear;
+        -webkit-transition: border .25s linear; */
+    }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    box-shadow: 0 0 0px 1000px @white inset !important;
+}

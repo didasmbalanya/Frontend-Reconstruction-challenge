@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "preserveConstEnums": true,
+        "allowSyntheticDefaultImports": true,
+        "strictNullChecks": true,
+        "inlineSources": true,
+        "inlineSourceMap": true,
+        "sourceRoot": "/",
+        "target": "es2017",
+        "outDir": ".build",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "lib": ["es5", "es6", "es7", "esnext.asynciterable", "es2017", "ES2020.Promise", "dom"],
+        "typeRoots": ["@types", "node_modules/@types"],
+        //"rootDir": "./functions",
+        "resolveJsonModule": true
+    },
+    "files": ["types.d.ts"],
+    "include": [
+        "tests/global.d.ts",
+        "tests/*.ts",
+        "__mocks__/*.ts",
+        "./scripts/**/*.ts",
+        "./playground/**/*.ts",
+        "./functions/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules/**/*",
+        ".serverless/**/*",
+        ".webpack/**/*",
+        "**/*.js",
+        "*.config.js",
+        "./node_modules/@mailchimp/mailchimp_marketing/types.d.ts"
+    ]
+}

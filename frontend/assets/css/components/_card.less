@@ -1,0 +1,108 @@
+.card-col-inner {
+    position: relative;
+    @media only screen and (max-width:767px) {
+        margin-bottom: 28px;
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+    &:hover .card-col-bottom-content {
+        opacity: 0;
+    }
+    .card-col-bottom-content {
+        position: absolute;
+        left: 24px;
+        bottom: 24px;
+        right: 24px;
+        z-index: 1;
+        @media only screen and (max-width:991px) {
+            left: 15px;
+            right: 15px;
+        }
+        h4,
+        p {
+            color: @white;
+            font-family: @Poppins;
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            font-size: 15px;
+            line-height: 22px;
+        }
+    }
+    &:hover .col-inner-content {
+        opacity: 1;
+        visibility: visible;
+        transform: translatey(0);
+    }
+    .col-inner-content {
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        top: 16px;
+        border-radius: 8px;
+        background: @uiDark;
+        opacity: 0;
+        visibility: hidden;
+        padding: 24px;
+        transition: all ease-in-out 0.4s;
+        z-index: 9;
+        overflow: auto;
+        cursor: default;
+        transform: translatey(16px);
+        h4 {
+            color: @white;
+            font-family: @Poppins;
+            font-size: 32px;
+            margin-bottom: 8px;
+            @media only screen and (max-width:1199px) {
+                font-size: 26px;
+            }
+        }
+        p {
+            color: @secondary;
+            font-weight: 500;
+        }
+        a {
+            position: absolute;
+            left: 24px;
+            bottom: 24px;
+            right: 24px;
+            color: @secondary;
+            font-weight: 500;
+            font-size: 20px;
+            font-family: @jubilat;
+            text-align: left;
+            border-top: 1px solid @white;
+            padding-top: 16px;
+            max-width: 100%;
+            line-height: 120%;
+            img {
+                float: right;
+                margin-top: 8px;
+            }
+        }
+        @media only screen and (max-width:991px) {
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+            top: 8px;
+            padding: 12px;
+            h4 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 14px;
+                line-height: normal;
+            }
+            a {
+                font-size: 16px;
+                left: 8px;
+                right: 8px;
+            }
+        }
+    }
+}

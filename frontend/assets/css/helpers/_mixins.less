@@ -1,0 +1,93 @@
+.box-card () {
+    background: @white;
+    box-shadow: 0px 4px 44px rgba(249, 214, 224, 0.3);
+    border-radius: 12px;
+}
+.section-margin () {
+    margin-bottom: 160px;
+    @media only screen and (max-width: 991px) {
+        margin-bottom: 120px;
+    }
+    @media only screen and (max-width: 767px) {
+        margin-bottom: 80px;
+    }
+}
+.section-padding () {
+    padding-bottom: 160px;
+    @media only screen and (max-width: 991px) {
+        padding-bottom: 120px;
+    }
+    @media only screen and (max-width: 767px) {
+        padding-bottom: 80px;
+    }
+}
+.MailChimpOnCards () {
+    .response-wrapper {
+        div,
+        a {
+            color: @primary!important;
+        }
+    }
+    .mailchimp__wrapper,
+    .signup__wrapper {
+        padding: 0;
+        max-width: 100%;
+        &.is-focused {
+            border-color: transparent !important;
+            .inputWrapper {
+                border-color: @primary !important;
+            }
+        }
+        .inputWrapper {
+            background: rgba(63, 13, 40, 0.1);
+            padding: 12px 16px;
+            border-radius: 14px;
+            margin-bottom: 12px;
+            border: 1px solid transparent;
+            label {
+                display: block;
+            }
+        }
+    }
+    .mailchimp__wrapper {
+        .ant-col {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+    }
+}
+.HeroWithImage () {
+    margin-top: @header-height;
+    margin-bottom: 0 !important;
+    padding-top: 0;
+    height: 720px;
+    .container {
+        height: 100%;
+        .ant-row {
+            height: 100%;
+            .ant-col {
+                &:last-child {
+                    height: 100%;
+                    img {
+                        object-fit: contain;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        height: auto;
+        margin-bottom: 48px !important;
+        .ant-row {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+.text-style() {
+    font-family: @Poppins;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+}

@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+.serverless/
+.webpackCache/
+.webpack/
+.env
+.idea
+.vscode-upload.json
+.env.stage
+.env.prod
+./hasura/dev.env
+hasura/dev.env
+hasura/prod.env
+hasura/stage.env

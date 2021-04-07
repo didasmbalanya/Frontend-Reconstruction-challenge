@@ -1,0 +1,167 @@
+.grid__wrapper {
+    @media only screen and (max-width:991px) {
+        .ant-col-offset-2,
+        .ant-col-offset-14 {
+            margin: 0;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    .grid__descroption {
+        max-width: 386px;
+        @media only screen and (max-width:991px) {
+            margin-bottom: 40px;
+        }
+        h4 {
+            color: @primary;
+            margin-bottom: 12px;
+            font-family: @Poppins;
+        }
+        p {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 160%;
+            padding-bottom: 15px;
+            @media only screen and (max-width:991px) {
+                font-size: 18px;
+            }
+        }
+    }
+    .grid__photo__wrapper {
+        margin-bottom: 145px;
+        &.grid__photo__wrapper__last {
+            margin: 0;
+        }
+        @media only screen and (max-width:991px) {
+            margin-bottom: 100px;
+        }
+        @media only screen and (max-width:767px) {
+            margin-bottom: 65px;
+        }
+        @media only screen and (max-width:991px) {
+            .ant-col {
+                &:empty {
+                    display: none;
+                }
+            }
+        }
+        .row__grid__1 {
+            .ant-col {
+                &:nth-child(3) {
+                    margin-top: -142px;
+                }
+                &:nth-child(2) {
+                    margin-top: 90px;
+                }
+                &:nth-child(1) {
+                    margin-top: 206px;
+                }
+            }
+            &.curriculum__grid__1 {
+               .ant-col {
+                    &:nth-child(2) {
+                        margin-top: -140px;
+                    }
+                    &:nth-child(1) {
+                        margin-top: 40px;
+                    }
+                }
+            }
+        }
+        .row__grid__common {
+            .ant-col {
+                &:nth-child(4) {
+                    margin-top: -548px;
+                }
+                &:nth-child(3) {
+                    margin-top: -348px;
+                }
+                &:nth-child(2) {
+                    margin-top: -115px;
+                }
+            }
+            &.row__grid__4 {
+                .ant-col {
+                    &:nth-child(4) {
+                        margin-top: -432px;
+                    }
+                    &:nth-child(3) {
+                        margin-top: -231px;
+                    }
+                }
+            }
+        }
+        &.curriculum__grid__photo__wrapper {
+            .row__grid__common {
+                .ant-col {
+                    &:nth-child(2) {
+                        margin-top: -180px;
+                    }
+                }
+            }
+        }
+        .card-col-inner {
+            position: relative;
+            width: 100%;
+            margin: 0;
+            &:hover {
+                .col-inner-content {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            img {
+                width: 100%;
+            }
+            h4 {
+                color: @white;
+                font-family: @Poppins;
+                margin-bottom: 0;
+                @media only screen and (max-width:991px) {
+                    font-size: 16px;
+                }
+            }
+            .card-col-bottom-content {
+                span {
+                    color: @white;
+                    font-size: 15px;
+                    line-height: 22px;
+                }
+            }
+            .col-inner-content {
+                position: absolute;
+                left: 16px;
+                right: 16px;
+                bottom: 16px;
+                top: 16px;
+                border-radius: 8px;
+                background: @uiDark;
+                opacity: 0;
+                visibility: hidden;
+                padding: 24px;
+                transition: all ease-in-out 0.4s;
+                z-index: 9;
+                overflow: auto;
+                @media only screen and (max-width:767px) {
+                    left: 5px;
+                    right: 5px;
+                    bottom: 5px;
+                    top: 5px;
+                    padding: 10px;
+                }
+                h4 {
+                    margin-bottom: 8px;
+                }
+                p {
+                    color: @secondary;
+                    font-weight: 500;
+                    @media only screen and (max-width:991px) {
+                        font-size: 14px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+}
