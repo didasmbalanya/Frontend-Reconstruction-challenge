@@ -31,11 +31,11 @@ https://shopify.dev/docs/admin-api/rest/reference/discounts/pricerule
 
 ### Requirements
 
-Clone or fork this repo, which you will use as a reference to start your challenge
-Open a PR or send us the link to your cloned repo at the end of the challenge
-Send us the link to your Shopify test store
-We must be able to compile and run your code
-Add a brief description or your implementation…
+- Clone or fork this repo, which you will use as a reference to start your challenge
+- Open a PR or send us the link to your cloned repo at the end of the challenge
+- Send us the link to your Shopify test store
+- We must be able to compile and run your code
+- Add a brief description or your implementation…
 
 
 # Frontend Code Challenge
@@ -46,3 +46,13 @@ Add a brief description or your implementation…
 The intent of this coding test is to assess your ability to work with requirements commonly seen at Reconstruction. We want you to display your knowledge of software design patterns, best practices, responsive web design, and working with art comps from our design team.
 
 There are a set of web technologies that are core to our solutions so we would like for your implementation to make use of React and Next.js. 
+
+### Requirements
+
+- Clone or fork this repo, which you will use as a reference to start your challenge
+- Open a PR or send us the link to your cloned repo at the end of the challenge
+- Code this component using Next.js to the best of your ability
+- We must be able to compile and run your code
+
+![image](https://user-images.githubusercontent.com/30765004/113932273-22821500-978f-11eb-81f2-f3872a25f515.png)
+
