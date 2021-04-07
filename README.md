@@ -5,7 +5,7 @@ This is a code challenge for candidacy in software engineering with Reconstructi
 
 ### Introduction
 
-The intent of this coding test is to assess your ability to work with requirements commonly seen at Reconstruction. We want you to display your knowledge of software design patterns, best practices, ….
+The intent of this coding test is to assess your ability to work with requirements commonly seen at Reconstruction. We want you to display your knowledge of software design patterns and best practices.
 
 There are a set of technologies that are core to our solutions so we would like for your implementation to make use of the following technologies:
 
@@ -43,15 +43,16 @@ https://shopify.dev/docs/admin-api/rest/reference/discounts/pricerule
 
 ### Introduction
 
-The intent of this coding test is to assess your ability to work with requirements commonly seen at Reconstruction. We want you to display your knowledge of software design patterns, best practices, responsive web design, and working with art comps from our design team.
+The intent of this coding test is to assess your ability to work with requirements commonly seen at Reconstruction. We want you to display your knowledge of best practices, responsive web design, and working with art comps from our design team.
 
-There are a set of web technologies that are core to our solutions so we would like for your implementation to make use of React and Next.js. 
+There are a set of web technologies that are core to our solutions so we would like for your implementation to make use of the following technologies: 
+- ReactJS/Next.js
 
 ### Requirements
 
 - Clone or fork this repo, which you will use as a reference to start your challenge
 - Open a PR or send us the link to your cloned repo at the end of the challenge
-- Code this component using Next.js to the best of your ability (optional bonus is making it mobile responsive)
+- Code this as a responsive component using Next.js to the best of your ability
 - We must be able to compile and run your code
 
 ![image](https://user-images.githubusercontent.com/30765004/113932273-22821500-978f-11eb-81f2-f3872a25f515.png)
