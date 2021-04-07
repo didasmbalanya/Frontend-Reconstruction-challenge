@@ -1,6 +1,7 @@
 We are excited to get to know you and your work better! See below for instructions on the Backend and Frontend code challenges. 
 
 # Backend Code Challenge
+### More information within "backend" folder in repo 
 
 
 ### Introduction
@@ -23,10 +24,6 @@ As part of our Subscription plan, we offer our users a 20% discount on all order
 Any Subscribed user should be able to buy products at our store using this discount, which should be applied automatically to their order during checkout. They can use this discount as many times as they want, without an end date, as long as they have an active Subscription.
 
 Reconstruction would like to restrict the automatic store discounts to users who are Subscribed to our Reconstruction platform. Users who are in a Pay as You Go plan should not receive the automatic discount. Our users are all identified through their email address.
-
-### Technical Brief                          
-
-https://shopify.dev/docs/admin-api/rest/reference/discounts/pricerule
                                                                
 
 ### Requirements
@@ -52,7 +49,7 @@ There are a set of web technologies that are core to our solutions so we would l
 
 - Clone or fork this repo, which you will use as a reference to start your challenge
 - Open a PR or send us the link to your cloned repo at the end of the challenge
-- Code the component below using Next.js to the best of your ability; make it responsive, use your font of choice 
+- Code the component below using Next.js to the best of your ability; must be responsive, use your font of choice 
 - We must be able to compile and run your code
 
 Here is the [Figma Board](https://www.figma.com/file/WtdJfhiaFTIuycqDHXcWOA/Reconstruction-Coding-Challenge?node-id=0%3A1) for you to reference the component specs in more depth. 
