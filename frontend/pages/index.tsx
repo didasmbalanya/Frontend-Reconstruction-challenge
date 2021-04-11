@@ -1,8 +1,7 @@
+import Carousel from '@components/common/Carousel';
+import Hero from '@components/home/Hero';
 
-import Hero from "@components/home/Hero";
-
-import MainLayout from "@components/layout/MainLayout";
-
+import MainLayout from '@components/layout/MainLayout';
 
 function Home() {
     return (
@@ -13,10 +12,9 @@ function Home() {
         >
             <Hero />
             <div className="container">
-                { /** place component here **/}
+                <Carousel />
             </div>
-
         </MainLayout>
     );
 }
-export default Home
+export default Home;

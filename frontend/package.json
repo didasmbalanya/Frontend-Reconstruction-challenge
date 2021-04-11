@@ -61,6 +61,7 @@
         "react": "16.13.1",
         "react-add-to-calendar-hoc": "^1.0.10",
         "react-dom": "16.13.1",
+        "react-elastic-carousel": "0.11.4",
         "react-ga": "^3.1.2",
         "react-hook-form": "^6.9.5",
         "react-infinite-scroll-component": "^5.1.0",
@@ -76,6 +77,7 @@
         "serverless-cloudfront-invalidate": "^1.5.0",
         "slugify": "^1.4.5",
         "string": "^3.3.3",
+        "styled-components": "5.2.3",
         "to-snake-case": "^1.0.0",
         "use-screenfull": "^0.0.4",
         "yup": "^0.29.3"
