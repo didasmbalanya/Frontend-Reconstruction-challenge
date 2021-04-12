@@ -6,12 +6,12 @@ export const CourseCard = ({ courseType, title, level, text }) => {
     return (
         <div
             style={{
-                minHeight: '367px',
-                borderRadius: '16px',
+                minHeight: '53.24vh',
+                borderRadius: '1em',
                 height: '100%',
                 width: '100%',
-                padding: '15px',
-                margin: '20px',
+                padding: '0.93em',
+                margin: '1em',
                 border: '1px solid #3F0D28',
                 boxSizing: 'border-box',
                 position: 'relative',
@@ -21,9 +21,9 @@ export const CourseCard = ({ courseType, title, level, text }) => {
             <div
                 style={{
                     position: 'absolute',
-                    height: '168px',
-                    left: '0.5px',
-                    right: '-0,33px',
+                    height: '12.1875em',
+                    left: '0.03125em',
+                    right: '-0.020625em',
                     top: '0px',
                 }}
             >
@@ -61,7 +61,7 @@ export const CourseCard = ({ courseType, title, level, text }) => {
                             fontFamily: 'Avenir',
                             fontStyle: 'normal',
                             fontWeight: 500,
-                            fontSize: '24px',
+                            fontSize: '1.5em',
                             lineHeight: '120%',
                             paddingBottom: '20px',
                         }}
@@ -75,12 +75,12 @@ export const CourseCard = ({ courseType, title, level, text }) => {
                             position: 'absolute',
                             height: '26px',
                             left: '24px',
-                            bottom: '20px',
+                            bottom: '15px',
 
                             fontFamily: 'Poppins',
                             fontStyle: 'normal',
                             fontWeight: 500,
-                            fontSize: '16px',
+                            fontSize: '1em',
                             lineHeight: '160%',
 
                             color: '#3F0D28',
@@ -108,15 +108,13 @@ export const CourseCard = ({ courseType, title, level, text }) => {
                             height: '78px',
                             left: '24px',
                             right: '23.67px',
-                            top: '192px',
+                            top: '12.5em',
                             fontFamily: 'Poppins',
                             fontStyle: 'normal',
                             fontWeight: 500,
-                            fontSize: '16px',
+                            fontSize: '1em',
                             lineHeight: '160%',
                             color: '#3F0D28',
-                            // overflow: text.length > 120 ? 'hidden' : 'unset',
-                            // textOverflow: text.length > 120 ?'ellipsis': 'unset',
                         }}
                     >
                         {text}
